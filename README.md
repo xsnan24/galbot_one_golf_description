@@ -98,6 +98,12 @@ convex hull per piece. The fingertip physics material uses static/dynamic fricti
 of `1.5` and restitution of `0`. Validate the collision geometry and material
 bindings with `python3 scripts/validate_gripper_collisions.py` (requires `usd-core`).
 
+Both finger sides use the shared `usd/payloads/geometries.usd` geometry library
+and `usd/payloads/instances.usda` collision definitions. Right finger meshes use
+the descriptive names `link_3_right_collision_01` through `_03`, preserving their
+side-specific coordinates without negative collision scales. `base.usda` references
+these definitions directly.
+
 ## Package Layout
 
 - `xacro/`: source robot descriptions
